@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent { docker { image 'python:3.10.1-alpine' } }
 	stages { 
 		stage('Checkout') {
 			steps {
@@ -8,12 +8,12 @@ pipeline {
 		}	
 		stage("Ejcucion test"){
 			steps {
-				python3 calculator.py 4 2
+				sh 'python3 calculator.py 4 2'
 			}
 		}
 		stage("Unit test"){
 			steps {
-				python3 test_calculator.py
+				sh 'python3 test_calculator.py'
 			}
 		}
 	}
