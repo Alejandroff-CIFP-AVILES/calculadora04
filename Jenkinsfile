@@ -11,7 +11,7 @@ pipeline {
 			steps {
 				script {
 	         		 sh """
-	          		 calculator.py 4 2
+	          		 calculadora.py 4 2
 	          		"""
 	          	}
           	}
