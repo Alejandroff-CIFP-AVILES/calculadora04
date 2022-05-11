@@ -7,11 +7,11 @@ pipeline {
 			}
 		}
 	
-		stage("Ejcucion test"){
+		stage("Ejecucion test"){
 			steps {
 				script {
 	         		 sh """
-	          		pylint calculator.py 4 2
+	          		 calculator.py 4 2
 	          		"""
 	          	}
           	}
