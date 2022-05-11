@@ -19,8 +19,14 @@ pipeline {
         }	
 		stage("Ejcucion test"){
 			steps {
-				python3 calculator.py 4 2
-			}
+				script {
+	         		 sh """
+	          		pylint calculator.py 4 2
+	          		"""
+	          	}
+          	}
+        }
+
 		}
 		stage("Unit test"){
 			steps {
