@@ -27,7 +27,7 @@ pipeline {
           	}
         }
 
-		}
+		
 		stage("Unit test"){
 			steps {
 				python3 test_calculator.py
