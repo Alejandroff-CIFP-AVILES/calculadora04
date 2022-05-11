@@ -6,7 +6,6 @@ pipeline {
                 sh 'python --version'
             }
         }
-
 		stage('Checkout') {
 			steps {
 				git url: 'https://github.com/Alejandroff-CIFP-AVILES/calculadora04', branch: "main"
